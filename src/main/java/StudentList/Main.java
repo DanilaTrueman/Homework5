@@ -6,6 +6,7 @@ public class Main {public static void main(String[] args) {
     List<Student> students = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
     System.out.println("Сколько студентов участвовало?");
+
     int numStudents = Integer.parseInt(scanner.nextLine());
 
     for (int i = 0; i < numStudents; i++) {
@@ -21,6 +22,7 @@ public class Main {public static void main(String[] args) {
         System.out.println("Введите баллы студента по каждому заданию (через пробел):");
         String[] scoresInput = scanner.nextLine().split(" ");
         List<Integer> scores = new ArrayList<>();
+
         for (String score : scoresInput) {
             scores.add(Integer.parseInt(score));
         }

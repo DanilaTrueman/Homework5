@@ -15,7 +15,7 @@ public class Student {
         this.scores = scores;
     }
 
-    // Геттеры и сеттеры
+
     public String getName() {
         return name;
     }

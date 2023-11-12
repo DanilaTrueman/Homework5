@@ -22,6 +22,7 @@ public class BookCatalog {
                 break;
             }
         }
+
         if (bookToRemove != null) {
             books.remove(bookToRemove);
         }

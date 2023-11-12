@@ -16,43 +16,53 @@ public class Main {
             System.out.println("4. Выйти");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // consume the newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
                     System.out.print("Введите id: ");
                     int id = scanner.nextInt();
-                    scanner.nextLine(); // consume the newline
+                    scanner.nextLine();
+
                     System.out.print("Введите название: ");
                     String title = scanner.nextLine();
+
                     System.out.print("Введите жанр: ");
                     String genre = scanner.nextLine();
+
                     System.out.print("Введите имя и фамилию автора: ");
                     String author = scanner.nextLine();
+
                     System.out.print("Введите год издания: ");
                     int year = scanner.nextInt();
-                    scanner.nextLine(); // consume the newline
+
+                    scanner.nextLine();
                     System.out.print("Введите краткое описание: ");
                     String description = scanner.nextLine();
 
                     Book newBook = new Book(id, title, genre, author, year, description);
                     catalog.addBook(newBook);
+
                     System.out.println("Книга добавлена!");
                     break;
+
                 case 2:
                     System.out.print("Введите id книги для удаления: ");
                     int idToRemove = scanner.nextInt();
                     catalog.removeBook(idToRemove);
                     System.out.println("Книга удалена, если она существовала.");
                     break;
+
                 case 3:
                     System.out.println("Выберите тип поиска:");
                     System.out.println("1. По названию");
                     System.out.println("2. По жанру");
                     System.out.println("3. По автору");
                     System.out.println("4. По году издания");
+
                     int searchChoice = scanner.nextInt();
-                    scanner.nextLine(); // consume the newline
+                    scanner.nextLine();
+
                     switch (searchChoice) {
                         case 1:
                             System.out.print("Введите название: ");
@@ -62,6 +72,7 @@ public class Main {
                                 System.out.println(book.getTitle() + " - " + book.getAuthor());
                             }
                             break;
+
                         case 2:
                             System.out.print("Введите жанр: ");
                             String searchGenre = scanner.nextLine();
@@ -70,6 +81,7 @@ public class Main {
                                 System.out.println(book.getTitle() + " - " + book.getAuthor());
                             }
                             break;
+
                         case 3:
                             System.out.print("Введите имя автора: ");
                             String searchAuthor = scanner.nextLine();
@@ -78,6 +90,7 @@ public class Main {
                                 System.out.println(book.getTitle() + " - " + book.getAuthor());
                             }
                             break;
+
                         case 4:
                             System.out.print("Введите год издания: ");
                             int searchYear = scanner.nextInt();
@@ -86,15 +99,18 @@ public class Main {
                                 System.out.println(book.getTitle() + " - " + book.getAuthor());
                             }
                             break;
+
                         default:
                             System.out.println("Неверный выбор.");
                             break;
                     }
                     break;
+
                 case 4:
                     System.out.println("Выход из приложения.");
                     System.exit(0);
                     break;
+
                 default:
                     System.out.println("Неверный выбор.");
                     break;

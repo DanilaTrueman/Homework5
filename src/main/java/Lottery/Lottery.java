@@ -15,6 +15,7 @@ public class Lottery {
         for (int i = balls.length - 1; i > 0; i--) {
             int j = rand.nextInt(i + 1);
             int temp = balls[i];
+
             balls[i] = balls[j];
             balls[j] = temp;
         }
