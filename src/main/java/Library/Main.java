@@ -16,7 +16,7 @@ public class Main {
             System.out.println("4. Выйти");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // consume the newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -42,7 +42,7 @@ public class Main {
                             }
                         } else {
                             System.out.println("Некорректный ввод. Пожалуйста, введите число.");
-                            scanner.nextLine(); // очистка буфера ввода
+                            scanner.nextLine();
                             System.out.print("Введите id: ");
                         }
                     }
@@ -66,7 +66,7 @@ public class Main {
                             yearIsValid = true;
                         } else {
                             System.out.println("Некорректный ввод. Пожалуйста, введите число.");
-                            scanner.nextLine(); // очистка буфера ввода
+                            scanner.nextLine();
                             System.out.print("Введите год издания: ");
                         }
                     }
@@ -95,7 +95,7 @@ public class Main {
                     System.out.println("4. По году издания");
 
                     int searchChoice = scanner.nextInt();
-                    scanner.nextLine(); // consume the newline
+                    scanner.nextLine();
 
                     switch (searchChoice) {
                         case 1:
