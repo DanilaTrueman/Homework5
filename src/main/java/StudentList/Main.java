@@ -5,11 +5,21 @@ import java.util.*;
 public class Main {public static void main(String[] args) {
     List<Student> students = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
-    System.out.println("Сколько студентов участвовало?");
 
-    int numStudents = Integer.parseInt(scanner.nextLine());
+    int numStudents = 0;
+    boolean validInput = false;
 
-    for (int i = 0; i < numStudents; i++) {
+    while (!validInput) {
+        try {
+            System.out.println("Сколько студентов участвовало?");
+            numStudents = Integer.parseInt(scanner.nextLine());
+            validInput = true;
+        } catch (NumberFormatException e) {
+            System.out.println("Введите пожалуйста число.");
+        }
+    }
+
+            for (int i = 0; i < numStudents; i++) {
         System.out.println("Введите имя студента:");
         String name = scanner.nextLine().trim();
 

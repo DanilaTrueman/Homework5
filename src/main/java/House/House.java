@@ -19,17 +19,17 @@ public class House  {
     }
 
     public static void main(String[] args) {
-        HashMap<String, Integer> houseMape = new HashMap<>();
-        houseMape.put("Стив Смит", 14);
-        houseMape.put("Хейли Смит", 19);
-        houseMape.put("Клаус Хайсслер", 70);
-        houseMape.put("Фрэнсин Смит", 40);
-        houseMape.put("Стэн Смит", 47);
-        houseMape.put("Роджер",1600);
+        HashMap<String, Integer> houseMap = new HashMap<>();
+        houseMap.put("Стив Смит", 14);
+        houseMap.put("Хейли Смит", 19);
+        houseMap.put("Клаус Хайсслер", 70);
+        houseMap.put("Фрэнсин Смит", 40);
+        houseMap.put("Стэн Смит", 47);
+        houseMap.put("Роджер",1600);
 
         ArrayList<String> residentsAbove18 = new ArrayList<>();
 
-        for (Map.Entry<String, Integer> entry : houseMape.entrySet()) {
+        for (Map.Entry<String, Integer> entry : houseMap.entrySet()) {
             if (entry.getValue() > 18) {
                 residentsAbove18.add(entry.getKey());
             }

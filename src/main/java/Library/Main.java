@@ -16,13 +16,36 @@ public class Main {
             System.out.println("4. Выйти");
 
             int choice = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // consume the newline
 
             switch (choice) {
                 case 1:
                     System.out.print("Введите id: ");
-                    int id = scanner.nextInt();
-                    scanner.nextLine();
+                    int id = 0;
+                    boolean idIsValid = false;
+                    while (!idIsValid) {
+                        if (scanner.hasNextInt()) {
+                            id = scanner.nextInt();
+                            scanner.nextLine();
+                            boolean idExists = false;
+                            for (Book book : catalog.getBooks()) {
+                                if (book.getId() == id) {
+                                    idExists = true;
+                                    break;
+                                }
+                            }
+                            if (idExists) {
+                                System.out.println("Книга с таким id уже существует. Пожалуйста, введите другой id.");
+                                System.out.print("Введите id: ");
+                            } else {
+                                idIsValid = true;
+                            }
+                        } else {
+                            System.out.println("Некорректный ввод. Пожалуйста, введите число.");
+                            scanner.nextLine(); // очистка буфера ввода
+                            System.out.print("Введите id: ");
+                        }
+                    }
 
                     System.out.print("Введите название: ");
                     String title = scanner.nextLine();
@@ -34,9 +57,20 @@ public class Main {
                     String author = scanner.nextLine();
 
                     System.out.print("Введите год издания: ");
-                    int year = scanner.nextInt();
+                    int year = 0;
+                    boolean yearIsValid = false;
+                    while (!yearIsValid) {
+                        if (scanner.hasNextInt()) {
+                            year = scanner.nextInt();
+                            scanner.nextLine();
+                            yearIsValid = true;
+                        } else {
+                            System.out.println("Некорректный ввод. Пожалуйста, введите число.");
+                            scanner.nextLine(); // очистка буфера ввода
+                            System.out.print("Введите год издания: ");
+                        }
+                    }
 
-                    scanner.nextLine();
                     System.out.print("Введите краткое описание: ");
                     String description = scanner.nextLine();
 
@@ -61,7 +95,7 @@ public class Main {
                     System.out.println("4. По году издания");
 
                     int searchChoice = scanner.nextInt();
-                    scanner.nextLine();
+                    scanner.nextLine(); // consume the newline
 
                     switch (searchChoice) {
                         case 1:
@@ -102,7 +136,6 @@ public class Main {
 
                         default:
                             System.out.println("Неверный выбор.");
-                            break;
                     }
                     break;
 

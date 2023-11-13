@@ -67,4 +67,8 @@ public class BookCatalog {
         }
         return result;
     }
+
+    public List<Book> getBooks() {
+        return books;
+    }
 }

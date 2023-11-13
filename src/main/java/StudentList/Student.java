@@ -48,7 +48,7 @@ public class Student {
         this.scores = scores;
     }
 
-    public double calculateAverageScore() {
+    public int calculateAverageScore() {
         if (scores.isEmpty()) {
             return 0;
         }
@@ -57,6 +57,6 @@ public class Student {
         for (int score : scores) {
             sum += score;
         }
-        return (double) sum / scores.size();
+        return (int) sum / scores.size();
     }
 }
