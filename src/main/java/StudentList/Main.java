@@ -14,6 +14,7 @@ public class Main {public static void main(String[] args) {
             System.out.println("Сколько студентов участвовало?");
             numStudents = Integer.parseInt(scanner.nextLine());
             validInput = true;
+
         } catch (NumberFormatException e) {
             System.out.println("Введите пожалуйста число.");
         }
