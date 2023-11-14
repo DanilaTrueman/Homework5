@@ -20,7 +20,7 @@ public class Main {public static void main(String[] args) {
         }
     }
 
-            for (int i = 0; i < numStudents; i++) {
+    for (int i = 0; i < numStudents; i++) {
         System.out.println("Введите имя студента:");
         String name = scanner.nextLine().trim();
 

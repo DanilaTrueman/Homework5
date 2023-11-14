@@ -7,7 +7,7 @@ public class Lottery {
 
         int[] balls = new int[100];
 
-        for (int i = 0; i < balls.length; i++){
+        for (int i = 0; i < balls.length; i++) {
             balls[i] = i;
         }
 
@@ -20,7 +20,7 @@ public class Lottery {
             balls[j] = temp;
         }
 
-        for (int i = 0; i < 10; i++){
+        for (int i = 0; i < 10; i++) {
             System.out.println(balls[i]);
         }
     }

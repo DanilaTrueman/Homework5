@@ -3,18 +3,20 @@ package House;
 import java.lang.reflect.Array;
 import java.util.*;
 
-public class House  {
+public class House {
     private String name;
     private int age;
 
-    public House (String name, int age) {
+    public House(String name, int age) {
         this.name = name;
         this.age = age;
     }
+
     public String getName() {
         return name;
     }
-    public  int getAge() {
+
+    public int getAge() {
         return age;
     }
 
@@ -25,7 +27,7 @@ public class House  {
         houseMap.put("Клаус Хайсслер", 70);
         houseMap.put("Фрэнсин Смит", 40);
         houseMap.put("Стэн Смит", 47);
-        houseMap.put("Роджер",1600);
+        houseMap.put("Роджер", 1600);
 
         ArrayList<String> residentsAbove18 = new ArrayList<>();
 
